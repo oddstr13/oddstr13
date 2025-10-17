@@ -12,8 +12,12 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      #- uses: lowlighter/metrics@latest
+      - uses: oddstr13/github-profile-metrics@odd-choices
         with:
+          use_prebuilt_image: no
+          debug: yes
+          debug_print: yes
           # Your GitHub token
           # The following scopes are required:
           #  - public_access (default scope)
@@ -59,5 +63,3 @@ jobs:
           plugin_notable_from: organization
           plugin_notable_skipped: EventAccess/*
           plugin_notable_types: commit
-          debug: yes
-          debug_print: yes
